@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Testside</title>
+<script>
+
+window.onload = oppstart;
+
+
+
+function oppstart(){
+
+	document.getElementById("btn").onclick = click;
+}
+
+function click(){
+
+	var money = parseInt(document.getElementById("money").value);
+	var rent = parseInt(document.getElementById("rent").value;)
+	var yrs = parseInt(document.getElementById("money").value);
+	
+	var list = "";
+	
+	
+	for(var i=0;i<yrs;i++){
+	
+		money =+ money*
+	
+		list += word + "</br>";
+		}
+	
+	
+	document.getElementById("text").innerHTML = list
+	}
+	
+
+
+
+</script>
+</head>
+<body>
+		
+		Cash:<input type="text" id="money" /><br />
+		Rentesats:<input type="text" id="rent" /><br />
+		År:<input type="text" id="yrs" /><br />
+		<button id="btn">Beregn</button>
+		<p id="text">lol</p>
+		
+</body>
+</html>

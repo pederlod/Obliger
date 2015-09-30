@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Testside</title>
+<script>
+
+window.onload = oppstart;
+
+
+
+function oppstart(){
+
+	document.getElementById("btn").onclick = click;
+}
+
+function click(){
+
+	var nmbr = parseInt(document.getElementById("nmbr").value);
+	var word = document.getElementById("word").value;
+	var list = "";
+	
+	
+	for(var i=0;i<nmbr;i++){
+	
+		list += word + "</br>";
+		}
+	
+	
+	document.getElementById("text").innerHTML = list
+	}
+	
+
+
+
+</script>
+</head>
+<body>
+		
+		Ord:<input type="text" id="word" /><br />
+		Tall:<input type="text" id="nmbr" /><br />
+		<button id="btn">Do</button>
+		<p id="text">lol</p>
+		
+</body>
+</html>
