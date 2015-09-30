@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Oppgave8</title>
+
+<script>
+
+window.onload = oppstart;
+
+
+function oppstart () {
+
+	document.getElementById("btn").onclick = findDays;
+}
+function findDays(){
+
+	var arr = ["Hans","Ole","Nils","Olav","Per","Knut","Kari","Line","Pia"];
+	var winner =[];
+	
+	var message = "";
+	var random = 0;
+
+	
+	for(i=0;i<3;i++){
+	
+		 random = Math.floor(Math.random()*arr.length);
+	
+		winner[i]=arr[random];
+		
+		arr.splice(random, 1) 
+	
+	
+	  message += winner[i]+" ";
+	}
+	
+
+
+	
+
+	
+	document.getElementById("message").innerHTML = message;
+}
+
+
+
+</script>	
+</head>
+<body>
+
+<button id="btn">GOGOGO</button>
+<p id="message">  <p> 
+ 
+</body>
+</html>

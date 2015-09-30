@@ -9,7 +9,7 @@
 
 window.onload = oppstart;
 
-var talliste = [0,1,13,3,4,5,6,7,8,9]
+var talliste = [1,1,13,3,4,5,6,7,8,9]
 
 function oppstart () {
 
@@ -60,7 +60,112 @@ function oppstart () {
 	
 	}
 	document.getElementById("opptelling4").innerHTML = opptelling4;
+
+// partall
+
+	var opptelling5 = ""
 	
+	for(var i=0;i<talliste.length;i++){
+		
+		if(talliste[i]%2===0)
+		
+		 opptelling5 += " "+talliste[i]
+	
+	}
+	document.getElementById("opptelling5").innerHTML = opptelling5;
+
+//Summen
+
+	var opptelling6 = 0
+	
+	for(var i=0;i<talliste.length;i++){
+		
+		 opptelling6 += talliste[i]
+	
+	}
+	document.getElementById("opptelling6").innerHTML = opptelling6;
+
+//antall elementer i array
+
+	var opptelling7 = 0
+	
+	for(var i=0;i<talliste.length;i++){
+		
+		 opptelling7 += 1
+	
+	}
+	document.getElementById("opptelling7").innerHTML = opptelling7;
+
+// Gjennomsnitt i arrayen
+
+	var opptelling8 = 0
+	
+	opptelling8 = opptelling6/opptelling7
+	
+	document.getElementById("opptelling8").innerHTML = opptelling8;
+
+//summ av partall
+
+	var opptelling9 = 0
+	
+	for(var i=0;i<talliste.length;i++){
+		
+		if(talliste[i]%2===0)
+		
+		 opptelling9 += talliste[i]
+	
+	}
+	document.getElementById("opptelling9").innerHTML = opptelling9;
+
+// minste element
+
+	var opptelling10 = 0
+	
+	for(var i=0;i<talliste.length;i++){
+		
+		if (i===0){
+			opptelling10 = talliste[i]
+		}
+		
+		else if(opptelling>talliste[i])
+		
+		 opptelling10 = talliste[i]
+	
+	}
+	document.getElementById("opptelling10").innerHTML = opptelling10;
+	
+//Finn ut om liste inneholder 1
+	
+	var opptelling11 = ""
+	
+	for(var i=0;i<talliste.length;i++){
+		
+		if (talliste[i]===1){
+			opptelling11 = "Ja"
+			
+			i=talliste.length
+		}
+		else{
+			opptelling11 = "Nei"
+		}
+	
+	}
+	document.getElementById("opptelling11").innerHTML = opptelling11;	
+
+//Hvor mange 1-ere?
+
+	var opptelling12 = 0
+	
+	for(var i=0;i<talliste.length;i++){
+		
+		if (talliste[i]===1){
+			opptelling12 += 1
+		}
+
+	
+	}
+	document.getElementById("opptelling12").innerHTML = opptelling12;
+
 }
 
 
@@ -74,10 +179,13 @@ function oppstart () {
 <p id="opptelling2"> Hue hue hue hue hue<p> 
 <p id="opptelling3"> Hue hue hue hue hue<p> 
 <p id="opptelling4"> Hue hue hue hue hue<p> 
-<p id="oppte3lling"> Hue hue hue hue hue<p> 
-<p id="opptel4ling"> Hue hue hue hue hue<p> 
-<p id="oppte2lling"> Hue hue hue hue hue<p> 
-<p id="opptel3ling"> Hue hue hue hue hue<p> 
-<p id="opptell4ing"> Hue hue hue hue hue<p> 
+<p id="opptelling5"> Hue hue hue hue hue<p> 
+<p id="opptelling6"> Hue hue hue hue hue<p> 
+<p id="opptelling7"> Hue hue hue hue hue<p> 
+<p id="opptelling8"> Hue hue hue hue hue<p> 
+<p id="opptelling9"> Hue hue hue hue hue<p> 
+<p id="opptelling10"> Hue hue hue hue hue<p> 
+<p id="opptelling11"> Hue hue hue hue hue<p> 
+<p id="opptelling12"> Hue hue hue hue hue<p> 
 </body>
 </html>

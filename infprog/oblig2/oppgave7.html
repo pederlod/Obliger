@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Oppgave7</title>
+
+<script>
+
+window.onload = oppstart;
+
+var days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+var months = ["Januar","Februar","Mars","April", "Mai","Juni","Juli","August","September","Oktober","November","Desember"]
+
+var number = 0;
+
+function oppstart () {
+
+	document.getElementById("btn").onclick = findDays;
+}
+function findDays(){
+	
+
+
+	var message = "";
+
+	var day = 0;
+	
+	var month = "";
+	
+	number = parseInt(document.getElementById("number").value);
+	
+	day = days[number-1];
+	
+	month = months[number-1];
+	
+	message = "Det er "+day+" dager i "+month+"!";
+	
+	document.getElementById("message").innerHTML = message;
+}
+
+
+
+</script>	
+</head>
+<body>
+<input id="number" type="number" placeholder="Skriv et tall fra 1-12">
+<button id="btn">GOGOGO</button>
+<p id="message"> Jeg har latt være å bruke IF-tester i denne oppgaven, og kan derfor ikke hindre "Det er undefined dager i undefined!"  <p> 
+ 
+</body>
+</html>
