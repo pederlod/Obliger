@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Oppgave4</title>
+<script>
+
+window.onload = oppstart;
+
+
+
+function oppstart(){
+
+	var list1 = "";
+	var list2 = "";
+	var list3 = "";
+	var list4 = "";
+
+	for(var i1=1;i1<6;i1++){
+	
+		for(var i2=1;i2<6;i2++){
+			
+			list1 += i1+""+i2+", "
+		}
+	}
+	document.getElementById("text1").innerHTML = list1
+
+	for(var i1=1;i1<6;i1++){
+	
+		for(var i2=1;i2<6;i2++){
+		
+			for(var i3=1;i3<6;i3++){
+			
+				list2 += i1+""+i2+""+i3+", "
+			}
+		}
+	}
+	document.getElementById("text2").innerHTML = list2
+	
+	for(var i1=1;i1<6;i1++){
+	
+		for(var i2=1;i2<6;i2++){
+		
+			for(var i3=1;i3<6;i3++){
+			
+				for(var i4=1;i4<6;i4++){
+				
+					list3 += i1+""+i2+""+i3+""+i4+", "
+				}
+			}
+		}
+	}
+	document.getElementById("text3").innerHTML = list3
+
+	for(var i1=1;i1<6;i1++){
+	
+		for(var i2=1;i2<6;i2++){
+		
+			for(var i3=1;i3<6;i3++){
+			
+				for(var i4=1;i4<6;i4++){
+			
+					for(var i5=1;i5<6;i5++){
+
+						list4 += i1+""+i2+""+i3+""+i4+""+i5+", "
+					}
+				}
+			}
+		}
+	}
+	document.getElementById("text4").innerHTML = list4
+
+}
+</script>
+</head>
+<body>
+
+		<p id="text1">dems skills</p>
+
+		<p id="text2">dems skills</p>
+		<p id="text3">dems skills</p>
+		<p id="text4">dems skills</p>
+
+		
+		
+</body>
+</html>

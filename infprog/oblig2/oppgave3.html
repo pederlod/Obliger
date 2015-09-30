@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Testside</title>
+<title>Oppgave3</title>
 <script>
 
 window.onload = oppstart;
@@ -17,17 +17,17 @@ function oppstart(){
 function click(){
 
 	var money = parseInt(document.getElementById("money").value);
-	var rent = parseInt(document.getElementById("rent").value;)
-	var yrs = parseInt(document.getElementById("money").value);
+	var rent = parseInt(document.getElementById("rent").value);
+	var yrs = parseInt(document.getElementById("yrs").value);
 	
 	var list = "";
 	
 	
 	for(var i=0;i<yrs;i++){
 	
-		money =+ money*
+		money += (money*rent*0.01)
 	
-		list += word + "</br>";
+		list += "Etter "+(i+1)+" år har du " + money + " penger på banken!" + "</br>";
 		}
 	
 	
@@ -42,10 +42,10 @@ function click(){
 <body>
 		
 		Cash:<input type="text" id="money" /><br />
-		Rentesats:<input type="text" id="rent" /><br />
+		Rentesats:<input type="text" id="rent" />%<br />
 		År:<input type="text" id="yrs" /><br />
 		<button id="btn">Beregn</button>
-		<p id="text">lol</p>
+		<p id="text">Bankens regnskap</p>
 		
 </body>
 </html>

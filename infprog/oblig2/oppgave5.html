@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Oppgave3</title>
+<style>
+p.courrier{
+    font-family: "Courier New", Courier, monospace;
+}
+</style>
+<script>
+
+window.onload = oppstart;
+
+
+
+function oppstart(){
+
+	document.getElementById("btn").onclick = click;
+}
+
+function click(){
+
+	var weekd = document.getElementById("weekd").value;
+	var days = parseInt(document.getElementById("days").value);
+
+	var list = "";
+	
+	var weekn =6
+	
+	if(weekd==="Tirsdag"||weekd==="tirsdag"){
+		weekn=0
+	}
+	else if(weekd==="Onsdag"||weekd==="onsdag"){
+		weekn=1
+	}	
+	else if(weekd==="Torsdag"||weekd==="torsdag"){
+		weekn=2
+	}	
+	else if(weekd==="Fredag"||weekd==="fredag"){
+		weekn=3
+	}	
+	else if(weekd==="Lørdag"||weekd==="lørdag"){
+		weekn=4
+	}	
+	else if(weekd==="Søndag"||weekd==="søndag"){
+		weekn=5
+		list+= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;"
+	}
+	else if(weekd==="Mandag"||weekd==="mandag"){
+		weekn=6
+	}
+	else{document.getElementById("Hahaha").innerHTML = "Skriv inn enten: Mandag, Tirsdag, Onsdag, Torsdag, Fredag, Lørdag eller Søndag er du grei"}
+	
+	
+	for(var i=0;i<days;i++){
+	
+		weekn +=1
+		
+		if (weekn%7===0&&i>0){
+			list += "</br>"
+		}
+		
+		if(i<10){
+			list += "&nbsp;"
+		}
+		
+		
+		list += "&nbsp;&nbsp;&nbsp;"+(i+1);
+		}
+	
+	
+	document.getElementById("text").innerHTML = list
+	}
+	
+
+
+
+</script>
+</head>
+<body>
+		
+		Ukedag:<input type="text" id="weekd" /><br /><p id="Hahaha"></p>
+		Dager:<input type="text" id="days" /><br />
+
+		<button id="btn">Lag kalender</button>
+		
+		<p class="courrier">&nbsp;&nbsp;&nbsp;ma&nbsp;&nbsp; ti&nbsp;&nbsp; on&nbsp;&nbsp; to&nbsp;&nbsp; fr&nbsp;&nbsp; lø&nbsp;&nbsp; sø</p>
+		<p id="text" class="courrier">Bankens regnskap</p>
+		
+</body>
+</html>
