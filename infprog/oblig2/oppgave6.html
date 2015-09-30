@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Oppgave6</title>
+
+<script>
+
+window.onload = oppstart;
+
+var talliste = [0,1,13,3,4,5,6,7,8,9]
+
+function oppstart () {
+
+
+
+//opptelling	
+	var opptelling = ""
+	
+	for(var i=0;i<talliste.length;i++){
+	
+		 opptelling += " "+talliste[i]
+	
+	}
+	document.getElementById("opptelling").innerHTML = opptelling;
+
+//Baklengs optelling
+
+	var opptelling2 = ""
+	
+	for(var i=0;i<talliste.length;i++){
+	
+		 opptelling2 += " "+talliste[9-i]
+	
+	}
+	document.getElementById("opptelling2").innerHTML = opptelling2;
+	
+//annenhvert
+	
+	var opptelling3 = ""
+	
+	for(var i=0;i<talliste.length;i+=2){
+	
+		 opptelling3 += " "+talliste[i]
+	
+	}
+	document.getElementById("opptelling3").innerHTML = opptelling3;
+	
+//alt under 10
+	
+	var opptelling4 = ""
+	var tallUnderTi
+	
+	for(var i=0;i<talliste.length;i++){
+		
+		if(talliste[i]<10)
+		
+		 opptelling4 += " "+talliste[i]
+	
+	}
+	document.getElementById("opptelling4").innerHTML = opptelling4;
+	
+}
+
+
+
+
+</script>	
+</head>
+<body>
+
+<p id="opptelling"> Hue hue hue hue hue<p> 
+<p id="opptelling2"> Hue hue hue hue hue<p> 
+<p id="opptelling3"> Hue hue hue hue hue<p> 
+<p id="opptelling4"> Hue hue hue hue hue<p> 
+<p id="oppte3lling"> Hue hue hue hue hue<p> 
+<p id="opptel4ling"> Hue hue hue hue hue<p> 
+<p id="oppte2lling"> Hue hue hue hue hue<p> 
+<p id="opptel3ling"> Hue hue hue hue hue<p> 
+<p id="opptell4ing"> Hue hue hue hue hue<p> 
+</body>
+</html>

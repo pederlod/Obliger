@@ -12,7 +12,7 @@ p.courrier{
 
 window.onload = oppstart;
 
-
+//Har sikkert en del unødvendig kode her når det gjelder mellomrom for riktig oppsett... men men :P
 
 function oppstart(){
 
@@ -29,26 +29,31 @@ function click(){
 	var weekn =6
 	
 	if(weekd==="Tirsdag"||weekd==="tirsdag"){
-		weekn=0
+		weekn=0;
+		list+= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 	}
 	else if(weekd==="Onsdag"||weekd==="onsdag"){
-		weekn=1
+		weekn=1;
+		list+= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 	}	
 	else if(weekd==="Torsdag"||weekd==="torsdag"){
-		weekn=2
+		weekn=2;
+		list+= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 	}	
 	else if(weekd==="Fredag"||weekd==="fredag"){
-		weekn=3
+		weekn=3;
+		list+= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 	}	
 	else if(weekd==="Lørdag"||weekd==="lørdag"){
-		weekn=4
+		weekn=4;
+		list+= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 	}	
 	else if(weekd==="Søndag"||weekd==="søndag"){
-		weekn=5
+		weekn=5;
 		list+= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;"
 	}
 	else if(weekd==="Mandag"||weekd==="mandag"){
-		weekn=6
+		weekn=6;
 	}
 	else{document.getElementById("Hahaha").innerHTML = "Skriv inn enten: Mandag, Tirsdag, Onsdag, Torsdag, Fredag, Lørdag eller Søndag er du grei"}
 	
@@ -57,7 +62,10 @@ function click(){
 	
 		weekn +=1
 		
-		if (weekn%7===0&&i>0){
+		if (weekn%7===0&&i>9){
+			list += "</br>&nbsp;"
+		}
+		else if (weekn%7===0&&i>0){
 			list += "</br>"
 		}
 		
@@ -80,13 +88,13 @@ function click(){
 </head>
 <body>
 		
-		Ukedag:<input type="text" id="weekd" /><br /><p id="Hahaha"></p>
-		Dager:<input type="text" id="days" /><br />
+		Hvilken ukedag starter din måned?<input type="text" id="weekd" /><br /><p id="Hahaha"></p>
+		Hvor mange dager er din måned?<input type="text" id="days" /><br />
 
 		<button id="btn">Lag kalender</button>
 		
-		<p class="courrier">&nbsp;&nbsp;&nbsp;ma&nbsp;&nbsp; ti&nbsp;&nbsp; on&nbsp;&nbsp; to&nbsp;&nbsp; fr&nbsp;&nbsp; lø&nbsp;&nbsp; sø</p>
-		<p id="text" class="courrier">Bankens regnskap</p>
+		<p class="courrier">&nbsp;&nbsp;&nbsp;&nbsp;ma&nbsp;&nbsp; ti&nbsp;&nbsp; on&nbsp;&nbsp; to&nbsp;&nbsp; fr&nbsp;&nbsp; lø&nbsp;&nbsp; sø</p>
+		<p id="text" class="courrier"> </p>
 		
 </body>
 </html>
